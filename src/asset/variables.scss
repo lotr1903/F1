@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+
+//Font
+$font-family: "Poppins", sans-serif;
+
+// Screen Resolution Breakpoints
+$xs-min: 0px;
+$xs-max: 499px;
+$sm-min: 500px;
+$sm-max: 699px;
+$md-min: 700px;
+$md-max: 999px;
+$lg-min: 1000px;
+
+// Z-Index
+$z-index-fifteen: 15;
+$z-index-one-hundred: 100;
+$z-index-overlay: 9999;
+
+// Colors
+$black-type-color:#07060C;
+$blue-type-color: #00AFEF;
+$grey-type-color:#C1C1C4;
+$green-type-color: #27A95C;
+$dark-grey-type-color:#545556;
+$brown-type-color: #97857D;
+$yellow-type-color: #fcd12a;
+$purple-type-color: #b35bac;
+$blue-color: #008cbf;
+$white-color: #ffffff;
+$black-color: #000000;
+$grey-color: #e6e6e6;
+$light-blue-color: #cceffc;
+$light-grey-color: #eeeeee;
+$dark-grey-color: #666666;
+
+// Fonts
+$font: 14px/16px $font-family;
+$font-color: $black-type-color;
+
+// Borders
+$border: 1px solid $grey-type-color;
+$border-radius: 3px;
+
+
+// Animation keygrames
+@keyframes opacityFadeIn {
+    0%   { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+@keyframes opacityFadeOut {
+    0%   { opacity: 1 }
+    100% { opacity: 0 }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,34 @@
+@import '../../asset/variables.scss';
+
+.Input {
+	box-sizing: border-box;
+	width: 30%;
+	
+	&__label {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		display: block;
+		float: left;
+		font-weight: bold;
+		line-height: 30px;
+	}
+	
+	&__element {
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid  $black-type-color;
+		color: $black-type-color;
+		line-height: 16px;
+		margin-left: 5px;
+		padding: 0 5px 4px;
+		outline: 0;
+	
+		&:focus {
+			border-color: $light-blue-color;
+			outline: none;            
+		}
+	}
+}

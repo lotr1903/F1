@@ -1,0 +1,41 @@
+@import '../../asset/variables.scss';
+
+.Main {
+	max-width: 1170px;
+	width: 100%;
+	
+	&__wrapper {
+		padding: 0 20px;
+		position: relative;
+	}
+
+    &__tabsHeader {
+        border-bottom: 3px solid $grey-type-color;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 20px;
+		text-align: center;
+		
+		&::after {
+			content: "";
+			width: 1em;
+			height: 1em;
+			text-align: center;
+			transition: all .35s;
+		}
+
+        div {
+            width: 150px;
+        }
+    }
+
+    &__tabs {
+        overflow: hidden;
+    }
+
+    &__error {
+        padding: 20px;
+    }
+}
+

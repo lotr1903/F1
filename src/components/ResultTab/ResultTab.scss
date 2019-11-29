@@ -1,0 +1,72 @@
+@import '../../asset/variables.scss';
+
+.ResultTab {
+    overflow: hidden;
+    width: 100%;
+
+    &:nth-child(even) {
+        .ResultTab__label {
+            background-color: $light-blue-color;
+        }
+    }
+
+    &__label {
+        align-items: center;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 20px;
+        text-align: center;
+
+
+        &::after {
+			content: "\276F";
+			width: 1em;
+			height: 1em;
+			text-align: center;
+			transition: all .35s;
+		}
+
+    	> div {
+    	    width: 150px;
+    	}
+	}
+
+    &__tabContent {
+        max-height: 0;
+        padding: 0 20px;        
+        transition: all .35s;
+    }
+
+    &__input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    &--selected {
+        &:nth-child(even) {
+            .ResultTab__label {
+                background-color: $blue-type-color;
+            }
+        }
+
+        .ResultTab__label {
+            background: $blue-type-color;
+            color: $white-color;
+                  
+            &::after {
+                transform: rotate(90deg);
+            }
+        }
+    
+        .ResultTab__tabContent {
+            border: 1px solid $grey-type-color;
+            max-height: 80vh;
+            overflow: auto;
+            padding: 0 20px;
+        }
+    }
+}

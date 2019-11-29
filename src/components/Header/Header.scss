@@ -1,0 +1,14 @@
+@import '../../asset/variables';
+
+.Header {
+    align-items: center;
+    border-bottom: 3px solid $blue-type-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    &__title {
+        color: $blue-type-color;
+        font-size:  32px;
+    }
+}

@@ -1,0 +1,75 @@
+@import '../../asset/variables.scss';
+
+.SeasonDetails {
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__listItem {
+		background-color: whitesmoke;
+		display: flex;
+        flex-flow: column nowrap;
+        margin: 15px 0;
+        width: 100%;
+        
+        &:first-of-type { 
+            margin-top:0
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__header {
+        border-bottom: 3px solid $grey-type-color;
+        display: flex;
+        flex-flow: column wrap;
+        text-align: center;
+	}
+
+	&__race {
+		font-size: 16px;
+		font-weight: bold;
+		padding: 20px;
+	}
+	
+	&__title {
+        align-items: center;
+        background-color: $light-grey-color;
+		border-bottom: 1px solid $grey-color;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 20px;
+		text-align: center;
+		
+		> div {
+            flex: 1;
+        }
+	}
+
+    &__content {
+        align-items: center;
+        background-color: $light-grey-color;
+        border-bottom: 3px solid $grey-type-color;
+        box-sizing: border-box;
+        color: $dark-grey-color;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 20px;
+		text-align: center;
+		
+		&.SeasonDetails--champion {
+            color: $blue-color;
+			background-color: $white-color;
+		}
+
+        > div {
+            flex: 1;
+        }
+	}
+}

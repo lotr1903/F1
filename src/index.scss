@@ -1,0 +1,55 @@
+@import './asset/variables.scss';
+
+html,
+body {
+	font-size: 16px;
+	font-family: $font-family;
+	min-height: 100vh;
+
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+@keyframes spinner {
+	0% {
+		transform: translate3d(-50%, -50%, 0) rotate(0deg);
+	}
+	
+	100% {
+		 transform: translate3d(-50%, -50%, 0) rotate(360deg);
+	}
+}
+
+.Main__spinner {
+	background-color: $grey-color;
+	height: 100vh;
+	left: 0;
+	max-width: 1170px;
+	opacity: 0.8;
+	position: absolute;
+	transition: opacity linear 0.3s;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+
+	&::before {
+		animation: 1.5s linear infinite spinner;
+		border: solid 10px $grey-color;
+		border-bottom-color: $blue-type-color;
+		border-radius: 50%;
+		content: "";
+		height: 100px;
+		left: 50%;
+		opacity: inherit;
+		position: absolute;
+		top: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		transform-origin: center;
+		width: 100px;
+		will-change: transform;
+	}
+}

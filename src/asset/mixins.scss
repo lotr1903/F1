@@ -1,0 +1,101 @@
+@import 'variables';
+
+// Media Queries
+@mixin xs {
+    @media (min-width: #{$xs-min}) {
+        @content;
+    }
+}
+
+@mixin xs-only {
+    @media (min-width: #{$xs-min}) and (max-width: #{$xs-max}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: #{$sm-min}) {
+        @content;
+    }
+}
+
+@mixin sm-only {
+    @media (min-width: #{$sm-min}) and (max-width: #{$sm-max}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: #{$md-min}) {
+        @content;
+    }
+}
+
+
+@mixin md-only {
+    @media (min-width: #{$md-min}) and (max-width: #{$md-max}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: #{$lg-min}) {
+        @content;
+    }
+}
+
+// To simplfy usage of offset positioning mixin
+/// @example
+/// @include position(absolute);
+/// @include position(relative);
+/// @include position(absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    bottom: $bottom;
+    left: $left;
+    position: $position;
+    right: $right;
+    top: $top;
+}
+
+// animation
+@mixin easeOutCubic ($property: none, $duration: 0, $delay: unset) {
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-delay: $delay;
+}
+
+// to create anchor
+@mixin anchor($color , $backgroundColor) {
+    color: $color;
+    text-decoration: none;
+    display: inline;
+    box-sizing: border-box;
+    @include transparentBorder();
+    outline: 0;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus {
+        border: 2px solid $color;
+    }
+
+    &:active {
+        background-color: $backgroundColor;
+        @include transparentBorder();
+    }
+}
+
+@mixin flex($flex, $flex-flow, $justifty-content) {
+    display: $flex;
+    flex-flow: $flex-flow;
+    justify-content: $justifty-content;
+    width: 100%;
+
+    > div {
+        flex: 1;
+    }
+}
